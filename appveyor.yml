@@ -24,7 +24,7 @@ configuration:
 
 build_script:
   # Fixed tag version number if using a tag.
-  - cmd: if %APPVEYOR_REPO_TAG% == "true" set APPVEYOR_BUILD_VERSION=%APPVEYOR_REPO_TAG_NAME%
+  - cmd: if "%APPVEYOR_REPO_TAG%" == "true" set APPVEYOR_BUILD_VERSION=%APPVEYOR_REPO_TAG_NAME%
   # vcbuild overwrites the platform variable.
   - cmd: set ARCH=%platform%
   - cmd: vcbuild.bat release shared %ARCH%
