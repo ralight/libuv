@@ -110,7 +110,7 @@ exit /b 1
 
 :have_gyp
 if not defined PYTHON set PYTHON=python
-"%PYTHON%" gyp_uv.py -Dtarget_arch=%target_arch% -Duv_library=%library%
+"%PYTHON%" gyp_uv.py -Dtarget_arch=%target_arch% -Duv_library=%library% -R libuv
 if errorlevel 1 goto create-msvs-files-failed
 if not exist uv.sln goto create-msvs-files-failed
 echo Project files generated.
