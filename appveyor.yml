@@ -2,6 +2,8 @@ version: v1.5.0.{build}
 
 environment:
   NSIS_ROOT: C:\nsis
+  version: bob
+  APPVEYOR_BUILD_VERSION: fred
 
 install:
   - appveyor DownloadFile "http://sunet.dl.sourceforge.net/project/nsis/NSIS 2/2.46/nsis-2.46-setup.exe" -FileName nsissetup.exe
